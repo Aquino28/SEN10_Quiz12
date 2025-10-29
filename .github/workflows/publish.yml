@@ -26,7 +26,7 @@ jobs:
         run: npm install -g eslint
 
       - name: Run ESLint check
-        run: eslint . --ext .js || true
+        run: eslint . --ext .js
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
