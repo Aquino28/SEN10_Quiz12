@@ -1,16 +1,16 @@
-name: Deploy static site to GitHub Pages
+name: Publish site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 permissions:
-  contents: read
   pages: write
   id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,22 +19,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm ci   # or `npm install` if you don't have package-lock.json
+        run: |
+          npm ci
 
-      - name: Run ESLint (fail on error)
-        run: npx eslint . --ext .js
+      - name: Run linter
+        run: |
+          npm run lint
 
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+      # If lint passed, package the site artifact
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: ./
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
