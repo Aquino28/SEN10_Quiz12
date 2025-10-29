@@ -5,7 +5,9 @@
   "scripts": {
     "lint": "eslint . --ext .js"
   },
-  "devDependencies": {
-    "eslint": "^8.50.0"
-  }
+ "devDependencies": {
+  "eslint": "^9.0.0",
+  "@eslint/js": "^9.0.0"
 }
+}
+
