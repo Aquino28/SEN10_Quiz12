@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Skip Node install (no dependencies)
+        run: echo "No npm dependencies to install"
 
       - name: Run linter
         run: npm run lint
