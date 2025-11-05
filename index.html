@@ -8,41 +8,56 @@
 </head>
 <body>
   <main class="container">
-    <h1>Ugliest UI example: CouponsSanDiego</h1>
-    <p class="source">
-      Source site: <a href="https://couponssandiego.com/" target="_blank" rel="noopener">couponssandiego.com</a>
-    </p>
 
-    <section class="screenshot">
-      <h2>Screenshot</h2>
-      <img src="assets/ugly-screenshot.png" alt="Screenshot of ugly UI" />
+    <!-- Runaway Button Intro -->
+    <section id="gate-section" class="gate">
+      <h1>Welcome to the Ugliest UI Experience 😅</h1>
+      <button id="fakeButton">Click to Enter</button>
+      <p id="message" class="hidden">
+        You can’t catch me 😜 … but here’s the real button anyways!
+      </p>
+      <button id="realButton" class="hidden" onclick="revealContent()">Open the Real Page</button>
     </section>
 
-    <section class="analysis">
-      <h2>Why this UI looks bad</h2>
-      <ul>
-        <li>Visual clutter — duplicated navigation and repeated headings, inconsistent hierarchy.</li>
-        <li>Poor spacing and alignment — elements are cramped and repeated, making scanning hard.</li>
-        <li>Accessibility issues — small contrast, cluttered links, many ARIA/semantic improvements needed.</li>
-        <li>Outdated styling — default fonts and unrefined layout give an untrustworthy impression.</li>
-      </ul>
-    </section>
+    <!-- Main Content (Hidden initially) -->
+    <section id="main-content" class="hidden">
 
-    <section class="improvements">
-      <h2>What I would do to improve it</h2>
-      <ol>
-        <li>Rebuild the information architecture: simplify menu, remove duplicate blocks, and create clear content hierarchy.</li>
-        <li>Improve typography: choose a readable font stack, scale headings properly, increase line-height.</li>
-        <li>Whitespace & layout: introduce a grid system / CSS variables for consistent spacing and responsive design.</li>
-        <li>Accessibility: add semantic headings, alt text, keyboard navigation, and ensure color contrast meets WCAG AA.</li>
-        <li>Modernize visuals: consistent color palette, nicer CTA buttons, and a responsive mobile-first approach.</li>
-        <li>Performance & SEO: compress images, add meta tags, and organize content for crawlers.</li>
-      </ol>
-    </section>
+      <h1>Ugliest UI example: CouponsSanDiego</h1>
+      <p class="source">
+        Source site: <a href="https://couponssandiego.com/" target="_blank" rel="noopener">couponssandiego.com</a>
+      </p>
 
-    <footer>
-      <p>Created for SCM / CI-CD demo — includes automated lint step that fails on JS rule violations.</p>
-    </footer>
+      <section class="screenshot">
+        <h2>Screenshot</h2>
+        <img src="assets/ugly-screenshot.png" alt="Screenshot of ugly UI" />
+      </section>
+
+      <section class="analysis">
+        <h2>Why this UI looks bad</h2>
+        <ul>
+          <li>Visual clutter — duplicated navigation and repeated headings, inconsistent hierarchy.</li>
+          <li>Poor spacing and alignment — elements are cramped and repeated, making scanning hard.</li>
+          <li>Accessibility issues — small contrast, cluttered links, many ARIA/semantic improvements needed.</li>
+          <li>Outdated styling — default fonts and unrefined layout give an untrustworthy impression.</li>
+        </ul>
+      </section>
+
+      <section class="improvements">
+        <h2>What I would do to improve it</h2>
+        <ol>
+          <li>Rebuild the information architecture: simplify menu, remove duplicate blocks, and create clear content hierarchy.</li>
+          <li>Improve typography: choose a readable font stack, scale headings properly, increase line-height.</li>
+          <li>Whitespace & layout: introduce a grid system / CSS variables for consistent spacing and responsive design.</li>
+          <li>Accessibility: add semantic headings, alt text, keyboard navigation, and ensure color contrast meets WCAG AA.</li>
+          <li>Modernize visuals: consistent color palette, nicer CTA buttons, and a responsive mobile-first approach.</li>
+          <li>Performance & SEO: compress images, add meta tags, and organize content for crawlers.</li>
+        </ol>
+      </section>
+
+      <footer>
+        <p>Created for SCM / CI-CD demo — includes automated lint step that fails on JS rule violations.</p>
+      </footer>
+    </section>
   </main>
 
   <script src="script.js"></script>
