@@ -38,3 +38,40 @@ footer{
     margin-top:20px; 
     font-size:.85rem; 
     color:var(--muted)}
+
+/*Runaway Button Section */
+.gate {
+  text-align: center;
+  padding: 80px 20px;
+  height: 80vh;
+  position: relative;
+}
+
+#fakeButton, #realButton {
+  font-size: 1.2em;
+  padding: 12px 28px;
+  border: none;
+  background-color: #720eff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+#fakeButton:hover {
+  background-color: #005fa3;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  margin-top: 300px;
+  font-style: italic;
+  color: #555;
+}
