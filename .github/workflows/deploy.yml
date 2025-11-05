@@ -67,7 +67,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /meowmeow  # site root deploy fail job
+          path: .  # site root deploy job
 
   deploy:
     name: Deploy to GitHub Pages
