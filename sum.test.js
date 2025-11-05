@@ -1,0 +1,10 @@
+import { sum } from "./sum.js";
+
+test("adds 1 + 2 to equal 3", () => {
+  expect(sum(1, 2)).toBe(3);
+});
+
+// 💥 Intentional failing test
+test("adds 2 + 2 to equal 5 (should fail)", () => {
+  expect(sum(2, 2)).toBe(5);
+});
