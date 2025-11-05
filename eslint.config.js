@@ -10,6 +10,8 @@ export default [
         window: "readonly",
         document: "readonly",
         console: "readonly",
+        test: "readonly",
+        expect: "readonly",
       },
     },
     rules: {
